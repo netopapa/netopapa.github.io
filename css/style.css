@@ -1,0 +1,71 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+
+/*HELPERS*/
+.cheio{
+	height: 100%;
+	width: 100%;
+}
+
+.overflow{
+	overflow: hidden;
+}
+
+
+/*elementos*/
+#sky{
+	background-image: url(../img/backgrounds/sky.jpg);
+	background-size: cover;
+}
+
+.perfil{
+	width: 200px;
+	height: 270px;
+	background-color: #cecece;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 7;
+}
+
+/*animações*/
+.nuvem01{
+	z-index: 10;
+	position: absolute;
+	bottom: -200px;
+	left: -50%;
+	animation: nuvem 25s linear infinite;
+	width: 600px;
+}
+
+.nuvem02{
+	z-index: 8;
+	position: absolute;
+	bottom: -150px;
+	left: -50%;
+	animation: nuvem 22s linear 10s infinite;
+	width: 500px;
+}
+.nuvem03{
+	z-index: 6;
+	position: absolute;
+	bottom: 200px;
+	left: -50%;
+	animation: nuvem 18s linear 3.2s infinite;
+	width: 400px;
+}
+
+@keyframes nuvem{
+	from{
+		left: -50%;
+	}
+	to{
+		left: 100%
+	}
+}
