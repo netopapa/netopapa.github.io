@@ -1,71 +1,118 @@
-html, body{
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	overflow: hidden;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
-
-
 /*HELPERS*/
-.cheio{
-	height: 100%;
-	width: 100%;
+
+.cheio {
+    height: 100%;
+    width: 100%;
 }
-
-.overflow{
-	overflow: hidden;
+.overflow {
+    overflow: hidden;
 }
-
-
+.center {
+    text-align: center;
+}
 /*elementos*/
-#sky{
-	background-image: url(../img/backgrounds/sky.jpg);
-	background-size: cover;
+
+#sky {
+    will-change: background-position;
+    background-image: url('../img/backgrounds/sky.jpg');
+    background-size: 180%;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    height: 600px;
+    width: 100%;
+    animation: sky 80s infinite; 
 }
 
-.perfil{
-	width: 200px;
-	height: 270px;
-	background-color: #cecece;
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	margin-left: -100px;
-	z-index: 7;
+@keyframes sky{
+    from{
+        background-position: 100% 100%;
+    }
+
+    to{
+        background-position: 0% 100%;
+    }
 }
 
+#montain-wp{
+    height: 140%;
+    position: relative;
+    top: 290px;
+}
+
+#montanha{
+    min-width: 100%;
+    margin-bottom: -10px;
+}
+
+.perfil {
+    position: absolute;
+    width: 50%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 7;
+}
+
+.perfil h1,h2 {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 0 1px 0 rgb(204, 204, 204), 0 2px 0 rgb(201, 201, 201), 0 3px 0 rgb(187, 187, 187), 0 4px 0 rgb(185, 185, 185), 0 5px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
+}
+.perfil h1 {
+    font-size: 55px;
+}
+.perfil h2 {
+    font-size: 40px;
+}
 /*animações*/
-.nuvem01{
-	z-index: 10;
-	position: absolute;
-	bottom: -200px;
-	left: -50%;
-	animation: nuvem 25s linear infinite;
-	width: 600px;
+
+.nuvem01 {
+    z-index: 10;
+    position: absolute;
+    top: 120px;
+    left: -50%;
+    animation: nuvem 17s linear infinite;
+    width: 500px;
+}
+.nuvem02 {
+    z-index: 8;
+    position: absolute;
+    top: 190px;
+    left: -50%;
+    animation: nuvem 15.4s linear 10s infinite;
+    width: 290px;
+}
+.nuvem03 {
+    z-index: 6;
+    position: absolute;
+    top: 200px;
+    left: -50%;
+    animation: nuvem 20s linear 3.2s infinite;
+    width: 250px;
+}
+@keyframes nuvem {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 100%
+    }
 }
 
-.nuvem02{
-	z-index: 8;
-	position: absolute;
-	bottom: -150px;
-	left: -50%;
-	animation: nuvem 22s linear 10s infinite;
-	width: 500px;
-}
-.nuvem03{
-	z-index: 6;
-	position: absolute;
-	bottom: 200px;
-	left: -50%;
-	animation: nuvem 18s linear 3.2s infinite;
-	width: 400px;
-}
-
-@keyframes nuvem{
-	from{
-		left: -50%;
-	}
-	to{
-		left: 100%
-	}
+#skils{
+    height: 300px;
+    background-color: #ffffff;
 }

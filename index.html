@@ -10,15 +10,43 @@
 
 	<!--estilos-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--font-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
 <body>
 
-<section id="sky" class="cheio overflow">
-	<img src="img/elementos/nuvem.png" class="nuvem01" id="nuvem">
-	<img src="img/elementos/nuvem.png" class="nuvem02" id="nuvem">
-	<img src="img/elementos/nuvem.png" class="nuvem03" id="nuvem">
-	<div class="perfil"></div>
+<section id="sky" class="overflow">
+	<img src="img/elementos/nuvem01.png" class="nuvem01">
+	<img src="img/elementos/nuvem02.png" class="nuvem02">
+	<img src="img/elementos/nuvem03.png" class="nuvem03">
+	<div class="perfil">
+		<h1 class="center">Papa Neto</h1>
+		<h2 class="center">Desenvolvedor web</h2>
+	</div>
 </section>
 
+<section class="overflow" id="montain-wp">
+	<img id="montanha" src="img/backgrounds/montain.png" alt="montanhas">
+	<div id="skils">
+		
+	</div>
+</section>	
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var scroll = $(window).scrollTop();
+		var perfil = $(".perfil");
+		if (scroll <= 600) {
+			perfil.css("transform", "translateX(-50%) translateY(" + (-scroll/3) + "px)");
+			perfil.css("opacity", 1-(scroll/600));
+		}
+	});
+});
+</script>
 </html>
+
