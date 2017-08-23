@@ -4,6 +4,11 @@ body {
     width: 100%;
     margin: 0;
 }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
 /*HELPERS*/
 
 .cheio {
@@ -15,6 +20,12 @@ body {
 }
 .center {
     text-align: center;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.justo{
+    text-align: justify;
 }
 /*elementos*/
 
@@ -40,17 +51,6 @@ body {
     }
 }
 
-#montain-wp{
-    height: 140%;
-    position: relative;
-    top: 290px;
-}
-
-#montanha{
-    min-width: 100%;
-    margin-bottom: -10px;
-}
-
 .perfil {
     position: absolute;
     width: 50%;
@@ -60,12 +60,11 @@ body {
     z-index: 7;
 }
 
-.perfil h1,h2 {
+.perfil h1, .perfil h2 {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     border: none;
-    font-family: 'Roboto', sans-serif;
     color: rgba(255, 255, 255, 1);
     -o-text-overflow: clip;
     text-overflow: clip;
@@ -112,7 +111,24 @@ body {
     }
 }
 
+#montain-wp{
+    position: relative;
+    top: 290px;
+}
+
+#montanha{
+    min-width: 100%;
+    margin-bottom: -10px;
+}
+
 #skils{
-    height: 300px;
     background-color: #ffffff;
+}
+
+#skils > div{
+    padding: 25px 0;
+}
+
+#skils p{
+    padding: 5px 20px;
 }
