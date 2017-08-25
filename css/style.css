@@ -121,14 +121,27 @@ body{
     margin-bottom: -10px;
 }
 
-#skills{
+#skils{
     background-color: #ffffff;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 600px;
 }
 
-#skills > div{
+#skils > div{
     padding: 25px 0;
 }
 
-#skills p{
+#skils p{
     padding: 5px 20px;
+}
+
+.skil{
+    background-color: #000000;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+
 }

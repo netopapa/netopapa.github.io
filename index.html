@@ -103,16 +103,42 @@ $(document).ready(function(){
 
 	//skills
 	var qtd = document.querySelectorAll('#skils .skil').length; //quantidade
-	var skil = $(".skil"); //cards
+	skil = $(".skil"); //cards
 	var skilH = skil.height(); //altura das skils
+	var skilW = skil.width(); //altura das skils
 	var totolx = window.screen.width; //largura da tela
+	var totoly = window.screen.height; //largura da tela
 
 	var x = 50;
 	var y= 50;
-	for (var i = 0; i < qtd; i++) {
-		
+	var spaceY = skilH + 50;
+	var spaceX = skilW + 50;
+	var limite = (totolx - skilW) - 60;
+
+	skil.eq(0).css('left', x+'px');
+	skil.eq(0).css('top', y+'px');
+
+	for (var i = 1; i < qtd; i++) {
+		x += spaceX;
+		if (x > limite) {
+			y += spaceY;
+			x -= limite;
+		}
+		skil.eq(i).css('left', x+'px');
+		skil.eq(i).css('top', y+'px');
 	}
-	
+
+	var totalv = y+skilH+50;
+	var offset = $("#skils").offset();
+	compensa = offset.top; 
+	$("#skils").mouseover(function() {
+		$("#skils").mousemove(function(event){
+			var posX = event.pageX;
+			var posY = event.pageY - compensa;
+			skil.css('transform', 'translate(-'+posX+'px, -'+posY+'px)');
+		});
+	});
+
 
 
 });
