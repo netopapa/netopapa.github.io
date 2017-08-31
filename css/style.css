@@ -9,6 +9,12 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
+
+section:not(#sky){
+    position: relative;
+    top: 290px;
+}
+
 /*HELPERS*/
 
 .cheio {
@@ -20,6 +26,9 @@ body{
 }
 .center {
     text-align: center;
+}
+.white{
+    color: #ffffff;
 }
 .uppercase{
     text-transform: uppercase;
@@ -111,11 +120,6 @@ body{
     }
 }
 
-#montain-wp{
-    position: relative;
-    top: 290px;
-}
-
 #montanha{
     min-width: 100%;
     margin-bottom: -10px;
@@ -123,6 +127,7 @@ body{
 
 #skils{
     background-color: #ffffff;
+    box-shadow: -2px 0 3px #000000;
 }
 
 #skils > div{
@@ -131,4 +136,36 @@ body{
 
 #skils p{
     padding: 5px 20px;
+}
+
+
+#montain-wp{
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/*cases*/
+
+#cases{
+    height: 500px;
+    background-color: #ffffff;
+}
+
+#cases > *:not(video){
+    position: relative;
+}
+
+video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .4s linear;
+}
+
+video.show {
+    opacity: 1;
+}
+video.fillWidth {
+    width: 100%;
 }
