@@ -1,0 +1,60 @@
+@media only screen and (max-width: 821px) {
+  .perfil h1 {
+    font-size: 25px;
+  }
+  .perfil h2 {
+    font-size: 20px;
+    transform: translateY(-35px);
+  }
+
+  #sky {
+    background-size: cover;
+    background-position: 100% 0;
+  }
+
+  @keyframes sky {
+    from {
+      background-position: 100% 0;
+    }
+
+    to {
+      background-position: 0% 0;
+    }
+  }
+
+  .nuvem01 {
+    width: 300px;
+  }
+  .nuvem02 {
+    width: 180px;
+    top: 37px;
+  }
+  .nuvem03 {
+    width: 120px;
+  }
+
+  #montanha {
+    width: 900px;
+    transform: translateX(-358px);
+  }
+
+  #skils > .row > div {
+    width: 100%;
+    max-width: none;
+    flex-basis: auto;
+  }
+
+  #about-me {
+    padding: 50px 10%;
+  }
+
+  #call-to-action .buttons-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10%;
+  }
+
+  .grama {
+    background-size: 90%;
+  }
+}

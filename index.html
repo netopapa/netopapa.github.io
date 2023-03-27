@@ -13,6 +13,7 @@
 
     <!--estilos-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile-style.css" />
     <link rel="stylesheet" type="text/css" href="css/flexboxgrid.css" />
 
     <!--font-->
@@ -219,7 +220,11 @@
       });
     });
 
-    new CircleType(document.getElementById("main-title")).radius(500);
+    if (window.clientWidth > 820) {
+      new CircleType(document.getElementById("main-title")).radius(500);
+    } else {
+      new CircleType(document.getElementById("main-title")).radius(300);
+    }
   </script>
 
   <script type="text/javascript">
